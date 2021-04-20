@@ -5,7 +5,9 @@ import { IProduct } from './product/Iproduct';
   providedIn: 'root'
 })
 export class DataSharingServiceService {
-
-  constructor() { }
+  constructor() {}
   products:IProduct[]=[];
+  updateproducts(p:IProduct){
+  this.products.push(p);  
+  }
 }
