@@ -62,6 +62,7 @@ export class DeleteCategoryComponent implements OnInit {
   DeleteOperations: string[] = ["Delete By Id", "Delete By Name", "Delete By Short Code",];
   DeleteByCateName(): void {
     this.dataservices.RemoveByCategoryName(this.DeleteByCName.get('CName').value);
+    this.dataservices.RemoveByName(this.DeleteByCName.get('CName').value);
   }
   DeleteByCateId():void{
     this.dataservices.RemoveByCategoryId(this.DeleteByCId.get('CId').value);

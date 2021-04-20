@@ -16,14 +16,7 @@
 
     </div>
     <span id="spanwelcome">Welcome</span>
-    <!-- <div class="flexpend"> <span class="flexpend"></span>
-      <button mat-icon-button class="example-icon favorite-icon" > <mat-icon>favorite</mat-icon></button>
-       
-     
-      <button mat-icon-button class="example-icon" >
-       <mat-icon>share</mat-icon>
-     </button>
-   </div> -->
+    
   </mat-toolbar-row>
 
   
@@ -64,24 +57,16 @@
         <span *ngIf="isExpanded">Home</span>
       </mat-list-item>
 
-      <mat-list-item [routerLink]="'Login'">
-       Login  <mat-icon mat-list-icon>login</mat-icon>
+      <mat-list-item [routerLink]="'Category'">
+       Category  <mat-icon mat-list-icon>category</mat-icon>
         <span *ngIf="isExpanded">Login</span>
       </mat-list-item>
 
-      <mat-list-item [routerLink]="'Signup'">
-        SignUp
-        <mat-icon mat-list-icon>face</mat-icon>
+      <mat-list-item [routerLink]="'Product'">
+        Product  <mat-icon mat-list-icon>shopping_cart</mat-icon>
         <span *ngIf="isExpanded">Signup</span>
       </mat-list-item>
-      <mat-list-item [routerLink]="'Context'">
-        Info
-        <mat-icon mat-list-icon>
-          contact_support
-          </mat-icon>
-        <span *ngIf="isExpanded">Contact Support</span>
-      </mat-list-item>
-
+      
     </mat-nav-list>
   </mat-sidenav>
 
