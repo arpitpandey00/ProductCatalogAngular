@@ -80,8 +80,25 @@ export class DataSharingServiceService {
     CShortCode:"stud"
   },
   ]
+  
+  checkingCatogiry:boolean=false;
   updateproducts(p:IProduct){
-  this.products.push(p);  
+  this.categories.forEach(cata => {
+   if( cata.CName!==p.Category)
+   {
+     this.checkingCatogiry=true;
+   }
+
+  });
+  if(this.checkingCatogiry===true)
+  {
+    this.products.push(p);
+    alert("This category is not avaliable please add this category after OK.");
+  }
+  else{
+
+    this.products.push(p);  
+  }
   }
   updatecategories(c:Icategory){
     this.categories.push(c);  
@@ -149,5 +166,6 @@ export class DataSharingServiceService {
       if(value.ShortCode == cshortcode) this.products.splice(index,1);
     });
   }
+  
   
 }
