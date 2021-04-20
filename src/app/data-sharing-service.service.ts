@@ -86,4 +86,47 @@ export class DataSharingServiceService {
   updatecategories(c:Icategory){
     this.categories.push(c);  
     }
+  RemoveById(cid:number)
+  {
+    console.log(cid);
+    this.products.forEach((value,index)=>{
+      if(value.Id == cid) this.products.splice(index,1);
+    });
+  }
+  RemoveByName(cname:string)
+  {
+    console.log(cname);
+    this.products.forEach((value,index)=>{
+      if(value.Name == cname) this.products.splice(index,1);
+    });
+  }
+  RemoveByShortCode(cshortcode:string)
+  {
+    console.log(cshortcode);
+    this.products.forEach((value,index)=>{
+      if(value.ShortCode == cshortcode) this.products.splice(index,1);
+    });
+  }
+  RemoveByCategoryId(cid:number)
+  {
+    console.log(cid);
+    this.categories.forEach((value,index)=>{
+      if(value.CId == cid) this.categories.splice(index,1);
+    });
+  }
+  RemoveByCategoryName(cname:string)
+  {
+    console.log(cname);
+    this.categories.forEach((value,index)=>{
+      if(value.CName == cname) this.categories.splice(index,1);
+    });
+  }
+  RemoveByCategoryShortCode(cshortcode:string)
+  {
+    console.log(cshortcode);
+    this.categories.forEach((value,index)=>{
+      if(value.CShortCode == cshortcode) this.categories.splice(index,1);
+    });
+  }
+  
 }
