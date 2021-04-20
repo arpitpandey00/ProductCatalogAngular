@@ -128,5 +128,26 @@ export class DataSharingServiceService {
       if(value.CShortCode == cshortcode) this.categories.splice(index,1);
     });
   }
+  RemoveProductByCategoryName(cname:string)
+  {
+    console.log(cname);
+    this.products.forEach((value,index)=>{
+      if(value.Category == cname) this.products.splice(index,1);
+    });
+  }
+  RemoveProductByCategoryId(cid:number)
+  {
+    console.log(cid);
+    this.products.forEach((value,index)=>{
+      if(value.Id == cid) this.products.splice(index,1);
+    });
+  }
+  RemoveProductByCategoryShortCode(cshortcode:string)
+  {
+    console.log(cshortcode);
+    this.products.forEach((value,index)=>{
+      if(value.ShortCode == cshortcode) this.products.splice(index,1);
+    });
+  }
   
 }

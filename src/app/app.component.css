@@ -45,6 +45,9 @@
   .toolbar #youtube-logo:hover {
     opacity: 0.8;
   } */
+  .matToolbar{
+    background-color: rgb(4, 131, 82);
+  }
 
   mat-sidenav-container {
     height: 100%;
