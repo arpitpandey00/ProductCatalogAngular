@@ -27,6 +27,12 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { SearchProductComponent } from './search-product/search-product.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { ListProductComponent } from './list-product/list-product.component';
+import { ByIdPipe } from './by-id.pipe';
+import { ByNamePipe } from './by-name.pipe';
+import { ByPriceGreaterThanPipe } from './by-price-greater-than.pipe';
+import { ByPriceLessThanPipe } from './by-price-less-than.pipe';
+import { ByPriceEqualTOPipe } from './by-price-equal-to.pipe';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +41,12 @@ import { ListProductComponent } from './list-product/list-product.component';
     AddProductComponent,
     SearchProductComponent,
     DeleteProductComponent,
-    ListProductComponent
+    ListProductComponent,
+    ByIdPipe,
+    ByNamePipe,
+    ByPriceGreaterThanPipe,
+    ByPriceLessThanPipe,
+    ByPriceEqualTOPipe
   ],
   imports: [
     BrowserModule,
@@ -57,7 +68,8 @@ import { ListProductComponent } from './list-product/list-product.component';
     MatRadioModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
