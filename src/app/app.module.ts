@@ -33,6 +33,13 @@ import { ByPriceGreaterThanPipe } from './by-price-greater-than.pipe';
 import { ByPriceLessThanPipe } from './by-price-less-than.pipe';
 import { ByPriceEqualTOPipe } from './by-price-equal-to.pipe';
 import {MatTableModule} from '@angular/material/table';
+import { AddCategoryComponent } from './add-category/add-category.component';
+import { SearchCategoryComponent } from './search-category/search-category.component';
+import { DeleteCategoryComponent } from './delete-category/delete-category.component';
+import { AllCategoryComponent } from './all-category/all-category.component';
+import { ByCIdPipe } from './by-cid.pipe';
+import { ByCNamePipe } from './by-cname.pipe';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +53,14 @@ import {MatTableModule} from '@angular/material/table';
     ByNamePipe,
     ByPriceGreaterThanPipe,
     ByPriceLessThanPipe,
-    ByPriceEqualTOPipe
+    ByPriceEqualTOPipe,
+    AddCategoryComponent,
+    SearchCategoryComponent,
+    DeleteCategoryComponent,
+    AllCategoryComponent,
+    ByCIdPipe,
+    ByCNamePipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

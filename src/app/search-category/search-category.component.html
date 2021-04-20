@@ -6,28 +6,16 @@
 </h3>
 <hr>
 <div class="row">
-    <div class="col-md-1"></div>
+    <div class="col-md-2"></div>
    
-    <div class="col-md-1">
-        Enter Id : <input type="number" [(ngModel)]="id" placeholder="Search By Id">
+    <div class="col-md-3">
+        Enter Id : <input type="number" [(ngModel)]="cid" placeholder="Search By Id">
     </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-1">
-        Enter Name : <input type="text" [(ngModel)]="name" placeholder="Search By Name">
+    <div class="col-md-2"></div>
+    <div class="col-md-3">
+        Enter Name : <input type="text" [(ngModel)]="cname" placeholder="Search By Name">
     </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-1">
-        Enter Price : <input type="number" placeholder="Price Greater Than" [(ngModel)]="pricegreaterthan">
-    </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-1">
-        Enter Price : <input type="number" placeholder="Price Less Than" [(ngModel)]="pricelessthan">
-    </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-1">
-        Enter Price : <input type="number" placeholder="Price Equal To" [(ngModel)]="priceequalto">
-    </div>
-</div>
+  </div>
 <div>
     <hr class="my-4">
     <div class="text-center">
@@ -36,24 +24,18 @@
                 <tr>
                     <th>ID</th>
                     <th>NAME</th>
-                    <th>MANUFACTURER</th>
-                    <th>MANUFACTURER</th>
                     <th>SHORT CODE</th>
                     <th>CATEGORY</th>
-                    <th>SELLING PRICE</th>
                 </tr>
             </thead>
             <tbody>
                 <tr
-                    *ngFor="let i of AllProductsSearch |byId:id|byName:name|byPriceEqualTO:priceequalto|byPriceGreaterThan:pricegreaterthan|byPriceLessThan:pricelessthan">
-                    <td>{{i.Id}}</td>
-                    <td>{{i.Name}}</td>
-                    <td>{{i.Manufacturer}}</td>
-                    <td>{{i.Description}}</td>
-                    <td>{{i.ShortCode}}</td>
-                    <td>{{i.Category}}</td>
-                    <td>{{i.SellingPrice}}</td>
-                </tr>
+                    *ngFor="let i of AllCategoriesSearch |byCId:cid|byName:byCName">
+                    <td>{{i.CId}}</td>
+                    <td>{{i.CName}}</td>
+                    <td>{{i.CDescription}}</td>
+                    <td>{{i.CShortCode}}</td>
+                 </tr>
             </tbody>
         </table>
     </div>

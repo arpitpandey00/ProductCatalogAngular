@@ -1,3 +1,6 @@
+<hr>
+<h1 class="text-center">Enter New Product</h1>
+<hr>
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
@@ -20,7 +23,7 @@
             *ngIf="!EnterProductForm?.get('Category')?.valid && EnterProductForm?.get('Category')?.touched">Category Required</div><br>
             Enter Short<input formControlName='ShortCode' type="text" class="form-control" placeholder="ShortCode">
             <div class="alert alert-danger"
-            *ngIf="!EnterProductForm?.get('ShortCode')?.valid && EnterProductForm?.get('ShortCode')?.touched">ShortCode Required</div><br>
+            *ngIf="!EnterProductForm?.get('ShortCode')?.valid && EnterProductForm?.get('ShortCode')?.touched ">ShortCode Required</div><br>
             Enter Selling Price<input formControlName='SellingPrice' type="number" class="form-control" placeholder="SellingPrice">
             <div class="alert alert-danger"
             *ngIf="!EnterProductForm?.get('SellingPrice')?.valid && EnterProductForm?.get('SellingPrice')?.touched">SellingPrice Required</div><br>

@@ -10,22 +10,17 @@
                 <tr>
                     <th>ID</th>
                     <th>NAME</th>
-                    <th>MANUFACTURER</th>
                     <th>DESCRIPTION</th>
                     <th>SHORT CODE</th>
-                    <th>CATEGORY</th>
-                    <th>SELLING PRICE</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let i of AllProducts">
-                        <td>{{i.Id}}</td>
-                        <td>{{i.Name}}</td>
-                        <td>{{i.Manufacturer}}</td>
-                        <td>{{i.Description}}</td>
-                        <td>{{i.ShortCode}}</td>
-                        <td>{{i.Category}}</td>
-                        <td>{{i.SellingPrice}}</td>
+                <tr *ngFor="let i of AllCategories">
+                        <td>{{i.CId}}</td>
+                        <td>{{i.CName}}</td>
+                        <td>{{i.CDescription}}</td>
+                        <td>{{i.CShortCode}}</td>
+                        
                 </tr>
             </tbody>
         </table>
