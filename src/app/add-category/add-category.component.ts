@@ -1,4 +1,3 @@
-import { flatten } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DataSharingServiceService } from '../data-sharing-service.service';
@@ -17,7 +16,7 @@ export class AddCategoryComponent implements OnInit {
     this.datasharingservice.updatecategories(this.EnterCategoryForm.value);
     this.EnterCategoryForm.reset();
   }
-
+ 
   ngOnInit(): void {
     this.EnterCategoryForm= new FormGroup({
       CId: new FormControl(null,[Validators.required]),

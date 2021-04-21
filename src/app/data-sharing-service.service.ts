@@ -162,7 +162,9 @@ export class DataSharingServiceService {
   RemoveProductByCategoryShortCode(cshortcode:string)
   {
     console.log(cshortcode);
+    
     this.products.forEach((value,index)=>{
+      console.log("1");
       if(value.ShortCode == cshortcode) this.products.splice(index,1);
     });
   }

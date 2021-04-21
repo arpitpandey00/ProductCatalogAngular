@@ -26,7 +26,7 @@
             *ngIf="!EnterProductForm?.get('ShortCode')?.valid && EnterProductForm?.get('ShortCode')?.touched ">ShortCode Required</div><br>
             Enter Selling Price<input formControlName='SellingPrice' type="number" class="form-control" placeholder="SellingPrice">
             <div class="alert alert-danger"
-            *ngIf="!EnterProductForm?.get('SellingPrice')?.valid && EnterProductForm?.get('SellingPrice')?.touched">SellingPrice Required</div><br>
+            *ngIf="!EnterProductForm?.get('SellingPrice')?.valid && EnterProductForm?.get('SellingPrice')?.touched && EnterProductForm?.get('SellingPrice')?.errors?.priceerror">SellingPrice Required should be between {{min}} and {{max}}</div><br>
             <button type="submit" [disabled]="EnterProductForm.invalid" class="btn btn-info">Update Product List</button>
             <button type="button" (click)='reset()' class="btn btn-danger">Reset Form</button>
         </form>
