@@ -1,4 +1,6 @@
-<hr>
+<div class="hero-image">
+    
+    <hr>
 <h1 class="text-center">Product Details</h1>
 <hr>
 <p class="lead text-center">All Product</p>
@@ -26,7 +28,7 @@
                         <td>{{i.ShortCode}}</td>
                         <td>{{i.Category}}</td>
                         <td>{{i.SellingPrice}}</td>
-                </tr>
+                    </tr>
             </tbody>
         </table>
     </div>
@@ -64,3 +66,4 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: rgb(219, 141, 141) ;"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;" style="background-color: rgb(236, 210, 176);"></tr>
     </table>
+    </div>

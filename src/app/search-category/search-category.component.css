@@ -1,3 +1,12 @@
 table {
     width: 100%;
   }
+  .hero-image {
+    background-image: url("src\assets\background.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }

@@ -1,35 +1,38 @@
-<hr>
-<h1 class="text-center">Enter New Product</h1>
-<hr>
-<div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+<div class="hero-image">
 
-        <form (ngSubmit)='updateproduct()' [formGroup]='EnterProductForm' novalidate class="form">
-            Enter ID :  <input formControlName='Id' type="number" class="form-control" placeholder="ID">
-            <div class="alert alert-danger"
-            *ngIf="!EnterProductForm?.get('Id')?.valid && EnterProductForm?.get('Id')?.touched">Id Required</div><br>
-            Enter Name :  <input formControlName='Name' type="text" class="form-control" placeholder="Name">
-            <div class="alert alert-danger"
-            *ngIf="!EnterProductForm?.get('Name')?.valid && EnterProductForm?.get('Name')?.touched">Name Required</div><br>
-            Enter Manufacturer :<input formControlName='Manufacturer' type="text" class="form-control" placeholder="Manufacturer" >
-            <div class="alert alert-danger"
-            *ngIf="!EnterProductForm?.get('Manufacturer')?.valid && EnterProductForm?.get('Manufacturer')?.touched ">Manufacturer Required</div> <br>
-            Enter Description :<input formControlName='Description' type="text" class="form-control" placeholder="Description" >
-            <div class="alert alert-danger"
-            *ngIf="!EnterProductForm?.get('Description')?.valid && EnterProductForm?.get('Description')?.touched">Description Required</div><br>
-            Enter Category<input formControlName='Category' type="text" class="form-control" placeholder="Category">
-            <div class="alert alert-danger"
-            *ngIf="!EnterProductForm?.get('Category')?.valid && EnterProductForm?.get('Category')?.touched">Category Required</div><br>
-            Enter Short<input formControlName='ShortCode' type="text" class="form-control" placeholder="ShortCode">
-            <div class="alert alert-danger"
-            *ngIf="!EnterProductForm?.get('ShortCode')?.valid && EnterProductForm?.get('ShortCode')?.touched ">ShortCode Required And Length Should Be Less Than 5</div><br>
-            Enter Selling Price<input formControlName='SellingPrice' type="number" class="form-control" placeholder="SellingPrice">
-            <div class="alert alert-danger"
-            *ngIf="!EnterProductForm?.get('SellingPrice')?.valid && EnterProductForm?.get('SellingPrice')?.touched && EnterProductForm?.get('SellingPrice')?.errors?.priceerror">SellingPrice Required should be between {{min}} and {{max}}</div><br>
-            <button type="submit" [disabled]="EnterProductForm.invalid" class="btn btn-info">Update Product List</button>
-            &nbsp; &nbsp;<button type="button" (click)='reset()' class="btn btn-danger">Reset Form</button>
-        </form>
-    </div>
-    
-</div><br> 
+    <hr>
+    <h1 class="text-center">Enter New Product</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            
+            <form (ngSubmit)='updateproduct()' [formGroup]='EnterProductForm' novalidate class="form">
+                Enter ID :  <input formControlName='Id' type="number" class="form-control" placeholder="ID">
+                <div class="alert alert-danger"
+                *ngIf="!EnterProductForm?.get('Id')?.valid && EnterProductForm?.get('Id')?.touched">Id Required</div><br>
+                Enter Name :  <input formControlName='Name' type="text" class="form-control" placeholder="Name">
+                <div class="alert alert-danger"
+                *ngIf="!EnterProductForm?.get('Name')?.valid && EnterProductForm?.get('Name')?.touched">Name Required</div><br>
+                Enter Manufacturer :<input formControlName='Manufacturer' type="text" class="form-control" placeholder="Manufacturer" >
+                <div class="alert alert-danger"
+                *ngIf="!EnterProductForm?.get('Manufacturer')?.valid && EnterProductForm?.get('Manufacturer')?.touched ">Manufacturer Required</div> <br>
+                Enter Description :<input formControlName='Description' type="text" class="form-control" placeholder="Description" >
+                <div class="alert alert-danger"
+                *ngIf="!EnterProductForm?.get('Description')?.valid && EnterProductForm?.get('Description')?.touched">Description Required</div><br>
+                Enter Category<input formControlName='Category' type="text" class="form-control" placeholder="Category">
+                <div class="alert alert-danger"
+                *ngIf="!EnterProductForm?.get('Category')?.valid && EnterProductForm?.get('Category')?.touched">Category Required</div><br>
+                Enter Short<input formControlName='ShortCode' type="text" class="form-control" placeholder="ShortCode">
+                <div class="alert alert-danger"
+                *ngIf="!EnterProductForm?.get('ShortCode')?.valid && EnterProductForm?.get('ShortCode')?.touched ">ShortCode Required And Length Should Be Less Than 5</div><br>
+                Enter Selling Price<input formControlName='SellingPrice' type="number" class="form-control" placeholder="SellingPrice">
+                <div class="alert alert-danger"
+                *ngIf="!EnterProductForm?.get('SellingPrice')?.valid && EnterProductForm?.get('SellingPrice')?.touched && EnterProductForm?.get('SellingPrice')?.errors?.priceerror">SellingPrice Required should be between {{min}} and {{max}}</div><br>
+                <button type="submit" [disabled]="EnterProductForm.invalid" class="btn btn-info">Update Product List</button>
+                &nbsp; &nbsp;<button type="button" (click)='reset()' class="btn btn-danger">Reset Form</button>
+            </form>
+        </div>
+        
+    </div><br> 
+</div>

@@ -46,7 +46,7 @@
     opacity: 0.8;
   } */
   .matToolbar{
-    background-color: rgb(4, 131, 82);
+    background-color: rgb(9, 155, 212);
   }
 
   mat-sidenav-container {
@@ -74,5 +74,10 @@
   #spanwelcome
   {
       margin: 0 400px;
+  }
+  .wel{
+    margin-left: 330px;
+    font-size: larger;
+    font-weight: bold;
   }
   

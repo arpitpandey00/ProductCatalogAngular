@@ -1,15 +1,16 @@
+<div class="hero-image">
 <hr>
 <h1 class="text-center">Enter New Category</h1>
 <hr>
-<div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-
-        <form (ngSubmit)='updatecategory()' [formGroup]='EnterCategoryForm' novalidate class="form">
-            Enter ID :  <input formControlName='CId' type="number" class="form-control" placeholder="ID">
-            <div class="alert alert-danger"
-            *ngIf="!EnterCategoryForm?.get('CId')?.valid && EnterCategoryForm?.get('CId')?.touched">Id Required</div><br>
-            Enter Name :  <input formControlName='CName' type="text" class="form-control" placeholder="Name">
+   <div class="row" >
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            
+            <form (ngSubmit)='updatecategory()' [formGroup]='EnterCategoryForm' novalidate class="form">
+                Enter ID :  <input formControlName='CId' type="number" class="form-control" placeholder="ID">
+                <div class="alert alert-danger"
+                *ngIf="!EnterCategoryForm?.get('CId')?.valid && EnterCategoryForm?.get('CId')?.touched">Id Required</div><br>
+                Enter Name :  <input formControlName='CName' type="text" class="form-control" placeholder="Name">
             <div class="alert alert-danger"
             *ngIf="!EnterCategoryForm?.get('CName')?.valid && EnterCategoryForm?.get('CName')?.touched">Name Required</div><br>
             Enter Description :<input formControlName='CDescription' type="text" class="form-control" placeholder="Description" >
@@ -24,3 +25,4 @@
     </div>
     
 </div><br> 
+</div>

@@ -1,24 +1,26 @@
-<hr>
-<h1 class="text-center">Product Details</h1>
-<hr>
-<h3>
-    <p class="lead text-center">Search-Products</p>
-</h3>
-<hr>
-<div class="row">
-    <div class="col-md-1"></div>
+<div class="hero-image">
+
+    <hr>
+    <h1 class="text-center">Product Details</h1>
+    <hr>
+    <h3>
+        <p class="lead text-center">Search-Products</p>
+    </h3>
+    <hr>
+    <div class="row">
+        <div class="col-md-1"></div>
    
-    <div class="col-md-1">
-        Enter Id : <input type="number" [(ngModel)]="id" placeholder="Search By Id" style="background-color: rgb(207, 187, 187);">
-    </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-1">
-        Enter Name : <input type="text" [(ngModel)]="name" placeholder="Search By Name" style="background-color: rgb(207, 187, 187);">
-    </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-1">
-        Enter Price : <input type="number" placeholder="Price Greater Than" [(ngModel)]="pricegreaterthan" style="background-color: rgb(207, 187, 187);">
-    </div>
+        <div class="col-md-1">
+            Enter Id : <input type="number" [(ngModel)]="id" placeholder="Search By Id" style="background-color: rgb(207, 187, 187);">
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1">
+            Enter Name : <input type="text" [(ngModel)]="name" placeholder="Search By Name" style="background-color: rgb(207, 187, 187);">
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1">
+            Enter Price : <input type="number" placeholder="Price Greater Than" [(ngModel)]="pricegreaterthan" style="background-color: rgb(207, 187, 187);">
+        </div>
     <div class="col-md-1"></div>
     <div class="col-md-1">
         Enter Price : <input type="number" placeholder="Price Less Than" [(ngModel)]="pricelessthan" style="background-color: rgb(207, 187, 187);">
@@ -29,35 +31,35 @@
     </div>
     <br>
     <hr class="my-4">
-<!-- </div>
-<div>
-    <div class="text-center">
-        <table class="table table-dark">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>MANUFACTURER</th>
-                    <th>MANUFACTURER</th>
-                    <th>SHORT CODE</th>
+    <!-- </div>
+        <div>
+            <div class="text-center">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>MANUFACTURER</th>
+                            <th>MANUFACTURER</th>
+                            <th>SHORT CODE</th>
                     <th>CATEGORY</th>
                     <th>SELLING PRICE</th>
                 </tr>
             </thead>
             <tbody>
                 <tr
-                    *ngFor="let i of AllProductsSearch |byId:id|byName:name|byPriceEqualTO:priceequalto|byPriceGreaterThan:pricegreaterthan|byPriceLessThan:pricelessthan">
-                    <td>{{i.Id}}</td>
-                    <td>{{i.Name}}</td>
-                    <td>{{i.Manufacturer}}</td>
-                    <td>{{i.Description}}</td>
-                    <td>{{i.ShortCode}}</td>
-                    <td>{{i.Category}}</td>
-                    <td>{{i.SellingPrice}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+                *ngFor="let i of AllProductsSearch |byId:id|byName:name|byPriceEqualTO:priceequalto|byPriceGreaterThan:pricegreaterthan|byPriceLessThan:pricelessthan">
+                <td>{{i.Id}}</td>
+                <td>{{i.Name}}</td>
+                <td>{{i.Manufacturer}}</td>
+                <td>{{i.Description}}</td>
+                <td>{{i.ShortCode}}</td>
+                <td>{{i.Category}}</td>
+                <td>{{i.SellingPrice}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 </div> -->
 
 
@@ -95,4 +97,6 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: rgb(219, 141, 141) ;"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;" style="background-color:  rgb(236, 210, 176);"></tr>
     </table>
-
+    
+    
+</div>

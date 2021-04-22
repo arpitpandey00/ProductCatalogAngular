@@ -1,58 +1,61 @@
-<span  class="center">
- 
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-      <h2>DELETE BY--</h2>
-      <mat-form-field >
-          <mat-label>Select an option</mat-label>
-          <mat-select [(value)]="selected">
-            <mat-option>None</mat-option>
-            <mat-option (click)='idserach()' value="option1">Delete by Id</mat-option>
-            <mat-option  (click)=' namesearch()' value="option2">Delete  by Name</mat-option>
-            <mat-option (click)=' shortcodesearch()' value="option3">Delete by Short Code</mat-option>
-          </mat-select>
-        </mat-form-field>
-      
-   
-      
-   
-   
-  <form  *ngIf=showid [formGroup]='DeleteById'  novalidate class="form">
-  <div class="form-group">
-      <label for="exampleInputPassword1">Enter Product Id</label>
-      <input formControlName='Id' type="number" class="form-control"  >
-      </div>     
-      <br>
-      <button (click)="DeleteByProdId()"class="btn btn-info">Delete</button>       
-      </form> 
-   
-      <form  *ngIf=showname [formGroup]='DeleteByName' novalidate class="form">
-          <div class="form-group">
-              <label for="exampleInputPassword1">Enter Product Name</label>
-              <input
-              formControlName='Name'
-              type="text" 
-              class="form-control" 
-              >
-              </div>   
-              <br>
-              <button (click)="DeleteByProdName()"class="btn btn-info">Delete</button>             
-              </form> 
-   
-              <form  *ngIf=showshortcode [formGroup]='DeleteByShortCode' novalidate class="form">
-                  <div class="form-group">
-                      <label for="exampleInputPassword1">Enter Product ShortCode</label>
-                      <input
-                      formControlName='ShortCode'
-                      type="text" 
-                      class="form-control" 
-                      >
-                      </div>  
-                      <br>
-                      <button (click)="DeleteByProdShortCode()"class="btn btn-info">Delete</button>              
-                      </form> 
+<div class="hero-image">
+
+    <span  class="center">
+        
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h2>DELETE BY--</h2>
+            <mat-form-field >
+                <mat-label>Select an option</mat-label>
+                <mat-select [(value)]="selected">
+                    <mat-option>None</mat-option>
+                    <mat-option (click)='idserach()' value="option1">Delete by Id</mat-option>
+                    <mat-option  (click)=' namesearch()' value="option2">Delete  by Name</mat-option>
+                    <mat-option (click)=' shortcodesearch()' value="option3">Delete by Short Code</mat-option>
+                </mat-select>
+            </mat-form-field>
             
-                  </div>
-                  <div class="col-md-3"></div>    
+            
+            
+            
+            
+            <form  *ngIf=showid [formGroup]='DeleteById'  novalidate class="form">
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Enter Product Id</label>
+                    <input formControlName='Id' type="number" class="form-control"  >
+                </div>     
+                <br>
+                <button (click)="DeleteByProdId()"class="btn btn-info">Delete</button>       
+            </form> 
    
-              </span>
+            <form  *ngIf=showname [formGroup]='DeleteByName' novalidate class="form">
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Enter Product Name</label>
+                    <input
+                    formControlName='Name'
+                    type="text" 
+                    class="form-control" 
+                    >
+                </div>   
+                <br>
+                <button (click)="DeleteByProdName()"class="btn btn-info">Delete</button>             
+            </form> 
+            
+            <form  *ngIf=showshortcode [formGroup]='DeleteByShortCode' novalidate class="form">
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Enter Product ShortCode</label>
+                    <input
+                    formControlName='ShortCode'
+                    type="text" 
+                    class="form-control" 
+                    >
+                </div>  
+                <br>
+                <button (click)="DeleteByProdShortCode()"class="btn btn-info">Delete</button>              
+            </form> 
+            
+        </div>
+        <div class="col-md-3"></div>    
+        
+    </span>
+</div>
