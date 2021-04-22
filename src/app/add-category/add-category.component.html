@@ -19,7 +19,7 @@
             <div class="alert alert-danger"
             *ngIf="!EnterCategoryForm?.get('CShortCode')?.valid && EnterCategoryForm?.get('CShortCode')?.touched ">ShortCode Required</div><br>
             <button type="submit" [disabled]="EnterCategoryForm.invalid" class="btn btn-info">Update Category List</button>
-            <button type="button" (click)='reset()' class="btn btn-danger">Reset Form</button>
+            &nbsp; &nbsp; <button type="button" (click)='reset()' class="btn btn-danger">Reset Form</button>
         </form>
     </div>
     

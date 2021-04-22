@@ -9,14 +9,16 @@
     <div class="col-md-2"></div>
    
     <div class="col-md-3">
-        Enter Id : <input type="number" [(ngModel)]="cid" placeholder="Search By Id">
+        Enter Id : <input type="number" [(ngModel)]="cid" placeholder="Search By Id" style="background-color: rgb(207, 187, 187);">
     </div>
     <div class="col-md-2"></div>
     <div class="col-md-3">
-        Enter Name : <input type="text" [(ngModel)]="cname" placeholder="Search By Name">
+        Enter Name : <input type="text" [(ngModel)]="cname" placeholder="Search By Name " style="background-color: rgb(207, 187, 187);">
     </div>
   </div>
-<div>
+  <br>
+  <hr class="my-4">
+<!-- <div>
     <hr class="my-4">
     <div class="text-center">
         <table class="table table-dark">
@@ -25,51 +27,40 @@
                     <th>ID</th>
                     <th>NAME</th>
                     <th>SHORT CODE</th>
-                    <th>CATEGORY</th>
+                   
                 </tr>
             </thead>
             <tbody>
                 <tr
-                    *ngFor="let i of AllCategoriesSearch |byCId:cid|byName:byCName">
+                    *ngFor="let i of AllCategoriesSearch |byCId:cid|byCName:cname">
                     <td>{{i.CId}}</td>
                     <td>{{i.CName}}</td>
-                    <td>{{i.CDescription}}</td>
                     <td>{{i.CShortCode}}</td>
+                    
                  </tr>
             </tbody>
         </table>
     </div>
-</div>
-
-
-<!-- 
+</div> -->
 <div class="col-md-12">
-    <table mat-table [dataSource]="AllProductsSearch" class="mat-elevation-z8">
-        <ng-container matColumnDef="ID">
+    <table mat-table [dataSource]="AllCategoriesSearch |byCId:cid|byCName:cname" class="mat-elevation-z8">
+        <ng-container matColumnDef="CID">
             <th mat-header-cell *matHeaderCellDef> ID </th>
-            <td mat-cell *matCellDef="let user"> {{user.Id}} </td>
+            <td mat-cell *matCellDef="let user"> {{user.CId}} </td>
         </ng-container>
-        <ng-container matColumnDef="NAME">
+        <ng-container matColumnDef="CNAME">
             <th mat-header-cell *matHeaderCellDef> NAME </th>
-            <td mat-cell *matCellDef="let user"> {{user.Name}} </td>
+            <td mat-cell *matCellDef="let user"> {{user.CName}} </td>
         </ng-container>
-        <ng-container matColumnDef="MANUFACTURER">
-            <th mat-header-cell *matHeaderCellDef> MANUFACTURER </th>
-            <td mat-cell *matCellDef="let user"> {{user.Manufacturer}} </td>
+        <ng-container matColumnDef="CDESCRIPTION">
+            <th mat-header-cell *matHeaderCellDef> DESCRIPTION </th>
+            <td mat-cell *matCellDef="let user"> {{user.CDescription}} </td>
         </ng-container>
-        <ng-container matColumnDef="SHORTCODE">
+        <ng-container matColumnDef="CSHORTCODE">
             <th mat-header-cell *matHeaderCellDef> SHORTCODE </th>
-            <td mat-cell *matCellDef="let user"> {{user.ShortCode}} </td>
+            <td mat-cell *matCellDef="let user"> {{user.CShortCode}} </td>
         </ng-container>
-        <ng-container matColumnDef="CATEGORY">
-            <th mat-header-cell *matHeaderCellDef> CATEGORY </th>
-            <td mat-cell *matCellDef="let user"> {{user.Category}} </td>
-        </ng-container>
-        <ng-container matColumnDef="SELLINGPRICE">
-            <th mat-header-cell *matHeaderCellDef> SELLINGPRICE </th>
-            <td mat-cell *matCellDef="let user"> {{user.SellingPrice}} </td>
-        </ng-container>
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table> -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns " style="background-color: rgb(219, 141, 141);"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"style="background-color:  rgb(236, 210, 176);"></tr>
+    </table>
 

@@ -9,27 +9,28 @@
     <div class="col-md-1"></div>
    
     <div class="col-md-1">
-        Enter Id : <input type="number" [(ngModel)]="id" placeholder="Search By Id">
+        Enter Id : <input type="number" [(ngModel)]="id" placeholder="Search By Id" style="background-color: rgb(207, 187, 187);">
     </div>
     <div class="col-md-1"></div>
     <div class="col-md-1">
-        Enter Name : <input type="text" [(ngModel)]="name" placeholder="Search By Name">
+        Enter Name : <input type="text" [(ngModel)]="name" placeholder="Search By Name" style="background-color: rgb(207, 187, 187);">
     </div>
     <div class="col-md-1"></div>
     <div class="col-md-1">
-        Enter Price : <input type="number" placeholder="Price Greater Than" [(ngModel)]="pricegreaterthan">
+        Enter Price : <input type="number" placeholder="Price Greater Than" [(ngModel)]="pricegreaterthan" style="background-color: rgb(207, 187, 187);">
     </div>
     <div class="col-md-1"></div>
     <div class="col-md-1">
-        Enter Price : <input type="number" placeholder="Price Less Than" [(ngModel)]="pricelessthan">
+        Enter Price : <input type="number" placeholder="Price Less Than" [(ngModel)]="pricelessthan" style="background-color: rgb(207, 187, 187);">
     </div>
     <div class="col-md-1"></div>
     <div class="col-md-1">
-        Enter Price : <input type="number" placeholder="Price Equal To" [(ngModel)]="priceequalto">
+        Enter Price : <input type="number" placeholder="Price Equal To" [(ngModel)]="priceequalto" style="background-color: rgb(207, 187, 187);">
     </div>
-</div>
-<div>
+    <br>
     <hr class="my-4">
+<!-- </div>
+<div>
     <div class="text-center">
         <table class="table table-dark">
             <thead>
@@ -57,12 +58,12 @@
             </tbody>
         </table>
     </div>
-</div>
+</div> -->
 
 
-<!-- 
+
 <div class="col-md-12">
-    <table mat-table [dataSource]="AllProductsSearch" class="mat-elevation-z8">
+    <table mat-table [dataSource]="AllProductsSearch |byId:id|byName:name|byPriceEqualTO:priceequalto|byPriceGreaterThan:pricegreaterthan|byPriceLessThan:pricelessthan" class="mat-elevation-z8">
         <ng-container matColumnDef="ID">
             <th mat-header-cell *matHeaderCellDef> ID </th>
             <td mat-cell *matCellDef="let user"> {{user.Id}} </td>
@@ -74,6 +75,10 @@
         <ng-container matColumnDef="MANUFACTURER">
             <th mat-header-cell *matHeaderCellDef> MANUFACTURER </th>
             <td mat-cell *matCellDef="let user"> {{user.Manufacturer}} </td>
+        </ng-container>
+        <ng-container matColumnDef="DESCRIPTION">
+            <th mat-header-cell *matHeaderCellDef> DESCRIPTION </th>
+            <td mat-cell *matCellDef="let user"> {{user.Description}} </td>
         </ng-container>
         <ng-container matColumnDef="SHORTCODE">
             <th mat-header-cell *matHeaderCellDef> SHORTCODE </th>
@@ -87,7 +92,7 @@
             <th mat-header-cell *matHeaderCellDef> SELLINGPRICE </th>
             <td mat-cell *matCellDef="let user"> {{user.SellingPrice}} </td>
         </ng-container>
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table> -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: rgb(219, 141, 141) ;"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" style="background-color:  rgb(236, 210, 176);"></tr>
+    </table>
 

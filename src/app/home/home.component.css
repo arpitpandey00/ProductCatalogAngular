@@ -1,0 +1,28 @@
+/* #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 50%; 
+    min-height: 50%;
+    color: springgreen;
+  } */
+  
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 20;
+    font-family: Arial;
+    font-size: 17px;
+  }
+  
+  #myVideo {
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    opacity:0.5;
+  }
+  

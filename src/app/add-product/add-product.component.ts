@@ -50,6 +50,5 @@ export class AddProductComponent implements OnInit {
   reset(): void {
     this.EnterProductForm.reset();
   }
-
 }
 

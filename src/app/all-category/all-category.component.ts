@@ -13,5 +13,5 @@ export class AllCategoryComponent implements OnInit {
    AllCategories:Icategory[]=this.datasharingservice.categories;
   ngOnInit(): void {
   }
-
+  displayedColumns=['CID','CNAME','CDESCRIPTION','CSHORTCODE']
 }

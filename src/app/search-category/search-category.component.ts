@@ -13,6 +13,7 @@ export class SearchCategoryComponent implements OnInit {
   AllCategoriesSearch:Icategory[]= this.datasharingservice.categories;
   ngOnInit(): void {
   }
+  displayedColumns=['CID','CNAME','CDESCRIPTION','CSHORTCODE']
   cid:number;
   cname:string;
 

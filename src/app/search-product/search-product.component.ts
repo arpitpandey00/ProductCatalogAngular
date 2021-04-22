@@ -13,7 +13,7 @@ export class SearchProductComponent implements OnInit {
   AllProductsSearch:IProduct[]= this.datasharingservice.products;
   ngOnInit(): void {
   }
-  displayedColumns: string[] = ['ID', 'NAME', 'MANUFACTURER',  'SHORTCODE','CATEGORY','SELLINGPRICE' ];
+  displayedColumns = ['ID', 'NAME', 'MANUFACTURER', 'DESCRIPTION', 'SHORTCODE','CATEGORY','SELLINGPRICE' ];
   
   id:number;
   name:string;
